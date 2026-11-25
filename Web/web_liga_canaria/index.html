@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Necesario para que la web se adapte al ancho del móvil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Liga Canaria de Videojuegos: temporada de eSports en Canarias">
+  <title>Inicio | Liga Canaria de Videojuegos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Liga Canaria <span>de Videojuegos</span></a>
+      <!-- Menú: en móvil se abre con el botón ☰ (checkbox + CSS, sin JavaScript) -->
+      <input type="checkbox" id="menu-check" class="menu-check">
+      <label for="menu-check" class="menu-boton" aria-label="Abrir menú">&#9776;</label>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="juegos.html">Juegos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="contacto.html">Inscripción</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="contenedor">
+        <h1>La nueva temporada de eSports de Canarias</h1>
+        <p>Equipos de las siete islas compiten durante toda la temporada en una selección de juegos
+           elegidos a partir del análisis de casi 13 000 títulos de Steam.</p>
+        <a href="contacto.html" class="boton">Inscribe a tu equipo</a>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>La temporada en cifras</h2>
+        <p class="subtitulo">Lo que te espera este año.</p>
+        <div class="rejilla">
+          <div class="tarjeta cifra"><strong>8</strong>equipos</div>
+          <div class="tarjeta cifra"><strong>6</strong>juegos oficiales</div>
+          <div class="tarjeta cifra"><strong>7</strong>islas representadas</div>
+          <div class="tarjeta cifra"><strong>14</strong>jornadas</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>Cómo funciona la liga</h2>
+        <p class="subtitulo">Tres pasos para empezar a competir.</p>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>1. Inscríbete</h3>
+            <p>Forma un equipo de 4 o 5 jugadores y rellena el formulario de inscripción.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>2. Elige tus juegos</h3>
+            <p>Cada equipo compite en al menos tres de los seis juegos oficiales de la temporada.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>3. Suma puntos</h3>
+            <p>Cada victoria da 3 puntos y cada empate 1. Los cuatro primeros juegan la final en Las Palmas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Liga Canaria de Videojuegos · Temporada 2026/2027</p>
+      <p>Proyecto de clase · Práctica V de Entornos de Desarrollo · CIFP César Manrique</p>
+    </div>
+  </footer>
+</body>
+</html>
