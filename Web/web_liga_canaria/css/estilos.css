@@ -1,0 +1,365 @@
+/* =========================================================
+   Liga Canaria de Videojuegos - hoja de estilos común
+   Diseño "mobile first": los estilos base son para móvil y
+   las media queries del final adaptan la web a pantallas grandes.
+   ========================================================= */
+
+/* ---------- Variables de color y medidas ---------- */
+:root {
+  --azul-oscuro: #0b1d33;
+  --azul: #14365c;
+  --amarillo: #f5c518;
+  --gris-claro: #f2f4f7;
+  --gris: #5b6675;
+  --blanco: #ffffff;
+  --radio: 10px;
+  --ancho-max: 1100px;
+}
+
+/* ---------- Reset básico ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--azul-oscuro);
+  background-color: var(--gris-claro);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--azul);
+}
+
+/* Contenedor centrado que se usa en todas las secciones */
+.contenedor {
+  width: 90%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+/* ---------- Cabecera y menú ---------- */
+.cabecera {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cabecera .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.logo {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo span {
+  color: var(--amarillo);
+}
+
+/* El checkbox controla si el menú está abierto en móvil (sin JavaScript) */
+.menu-check {
+  display: none;
+}
+
+.menu-boton {
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu {
+  list-style: none;
+  width: 100%;
+  display: none;          /* oculto en móvil hasta pulsar el botón */
+  flex-direction: column;
+  margin-top: 0.8rem;
+}
+
+.menu-check:checked ~ nav .menu {
+  display: flex;
+}
+
+/* En móvil el menú ocupa toda la fila, debajo del logo */
+.cabecera nav {
+  width: 100%;
+}
+
+.menu a {
+  display: block;
+  padding: 0.6rem 0;
+  color: var(--blanco);
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: var(--amarillo);
+}
+
+/* ---------- Portada (hero) ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+  color: var(--blanco);
+  text-align: center;
+  padding: 3.5rem 0;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  color: #d6deea;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.boton:hover {
+  background-color: #ffd84d;
+}
+
+/* ---------- Secciones genéricas ---------- */
+.seccion {
+  padding: 2.5rem 0;
+}
+
+.seccion h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: var(--gris);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Rejilla de tarjetas ---------- */
+/* auto-fit + minmax hace que el número de columnas se adapte solo al ancho */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  padding: 1.4rem;
+  box-shadow: 0 2px 8px rgba(11, 29, 51, 0.08);
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta h3 {
+  margin-bottom: 0.4rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: var(--gris-claro);
+  color: var(--azul);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  margin: 0 0.3rem 0.5rem 0;
+}
+
+.nota {
+  float: right;
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  border-radius: 50%;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  text-align: center;
+}
+
+.datos {
+  list-style: none;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+
+/* Cifras destacadas de la portada */
+.cifra {
+  text-align: center;
+}
+
+.cifra strong {
+  display: block;
+  font-size: 2.2rem;
+  color: var(--azul);
+}
+
+/* ---------- Tablas ---------- */
+/* En móvil la tabla puede ser más ancha que la pantalla: se desplaza en horizontal */
+.tabla-scroll {
+  overflow-x: auto;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: 0 2px 8px rgba(11, 29, 51, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--gris-claro);
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(11, 29, 51, 0.08);
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #c8d0db;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--amarillo);
+  border-color: var(--amarillo);
+}
+
+.dos-columnas {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  background-color: var(--azul-oscuro);
+  color: #c4cfdd;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   Media queries
+   ========================================================= */
+
+/* Tablets y pantallas medianas */
+@media (min-width: 768px) {
+  .menu-boton {
+    display: none;          /* en pantallas grandes no hace falta el botón */
+  }
+
+  .cabecera nav {
+    width: auto;
+  }
+
+  .menu {
+    display: flex;          /* el menú se ve siempre */
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+
+  .menu a {
+    border-top: none;
+    padding: 0;
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .dos-columnas {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .seccion {
+    padding: 3.5rem 0;
+  }
+}

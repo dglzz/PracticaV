@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Necesario para que la web se adapte al ancho del móvil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juegos oficiales de la Liga Canaria de Videojuegos">
+  <title>Juegos | Liga Canaria de Videojuegos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Liga Canaria <span>de Videojuegos</span></a>
+      <!-- Menú: en móvil se abre con el botón ☰ (checkbox + CSS, sin JavaScript) -->
+      <input type="checkbox" id="menu-check" class="menu-check">
+      <label for="menu-check" class="menu-boton" aria-label="Abrir menú">&#9776;</label>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="juegos.html" class="activo">Juegos</a></li>
+          <li><a href="clasificacion.html">Clasificación</a></li>
+          <li><a href="contacto.html">Inscripción</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>Juegos oficiales de la temporada</h2>
+        <p class="subtitulo">Seleccionados entre los juegos multijugador con mejor nota de la base de datos de Steam.</p>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <span class="nota" title="Nota Metacritic">92</span>
+            <h3>Team Fortress 2</h3>
+            <span class="etiqueta">Acción</span><span class="etiqueta">Gratis</span>
+            <p>Disparos por equipos con nueve clases distintas.</p>
+            <ul class="datos">
+              <li><strong>Año:</strong> 2007</li>
+              <li><strong>Precio:</strong> Gratis</li>
+              <li><strong>Plataformas:</strong> Windows, Mac, Linux</li>
+              <li><strong>Modo:</strong> Multijugador</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <span class="nota" title="Nota Metacritic">90</span>
+            <h3>Dota 2</h3>
+            <span class="etiqueta">Estrategia</span><span class="etiqueta">Gratis</span>
+            <p>MOBA de 5 contra 5, uno de los juegos con más competición del mundo.</p>
+            <ul class="datos">
+              <li><strong>Año:</strong> 2013</li>
+              <li><strong>Precio:</strong> Gratis</li>
+              <li><strong>Plataformas:</strong> Windows, Mac, Linux</li>
+              <li><strong>Modo:</strong> Multijugador, cooperativo</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <span class="nota" title="Nota Metacritic">91</span>
+            <h3>Street Fighter IV</h3>
+            <span class="etiqueta">Lucha</span>
+            <p>Combates uno contra uno, ideales para el torneo individual.</p>
+            <ul class="datos">
+              <li><strong>Año:</strong> 2009</li>
+              <li><strong>Precio:</strong> 19,99 $</li>
+              <li><strong>Plataformas:</strong> Windows</li>
+              <li><strong>Modo:</strong> Un jugador, multijugador</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <span class="nota" title="Nota Metacritic">94</span>
+            <h3>Sid Meier's Civilization VI</h3>
+            <span class="etiqueta">Estrategia</span>
+            <p>Estrategia por turnos para las partidas largas de los fines de semana.</p>
+            <ul class="datos">
+              <li><strong>Año:</strong> 2016</li>
+              <li><strong>Precio:</strong> 59,99 $</li>
+              <li><strong>Plataformas:</strong> Windows, Mac</li>
+              <li><strong>Modo:</strong> Un jugador, multijugador</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <span class="nota" title="Nota Metacritic">92</span>
+            <h3>Out of the Park Baseball 17</h3>
+            <span class="etiqueta">Deportes</span><span class="etiqueta">Indie</span>
+            <p>Simulador de gestión deportiva: la categoría de deportes de la liga.</p>
+            <ul class="datos">
+              <li><strong>Año:</strong> 2016</li>
+              <li><strong>Precio:</strong> 39,99 $</li>
+              <li><strong>Plataformas:</strong> Windows, Mac, Linux</li>
+              <li><strong>Modo:</strong> Un jugador, multijugador</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <span class="nota" title="Nota Metacritic">91</span>
+            <h3>Tumblestone</h3>
+            <span class="etiqueta">Puzle</span><span class="etiqueta">Indie</span>
+            <p>Puzle competitivo rápido para la categoría casual.</p>
+            <ul class="datos">
+              <li><strong>Año:</strong> 2016</li>
+              <li><strong>Precio:</strong> 9,99 $</li>
+              <li><strong>Plataformas:</strong> Windows, Mac</li>
+              <li><strong>Modo:</strong> Un jugador, multijugador</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Liga Canaria de Videojuegos · Temporada 2026/2027</p>
+      <p>Proyecto de clase · Práctica V de Entornos de Desarrollo · CIFP César Manrique</p>
+    </div>
+  </footer>
+</body>
+</html>

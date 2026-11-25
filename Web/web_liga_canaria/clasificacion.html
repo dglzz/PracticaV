@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Necesario para que la web se adapte al ancho del móvil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clasificación y próxima jornada de la liga">
+  <title>Clasificación | Liga Canaria de Videojuegos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Liga Canaria <span>de Videojuegos</span></a>
+      <!-- Menú: en móvil se abre con el botón ☰ (checkbox + CSS, sin JavaScript) -->
+      <input type="checkbox" id="menu-check" class="menu-check">
+      <label for="menu-check" class="menu-boton" aria-label="Abrir menú">&#9776;</label>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="juegos.html">Juegos</a></li>
+          <li><a href="clasificacion.html" class="activo">Clasificación</a></li>
+          <li><a href="contacto.html">Inscripción</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>Clasificación general</h2>
+        <p class="subtitulo">Después de la jornada 11. Victoria: 3 puntos; empate: 1 punto.</p>
+        <div class="tabla-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Pos.</th><th>Equipo</th><th>Isla</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Puntos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td><td>Guanches eSports</td><td>Tenerife</td><td>11</td><td>9</td><td>1</td><td>1</td><td><strong>28</strong></td>
+              </tr>
+              <tr>
+                <td>2</td><td>Tajaraste Gaming</td><td>La Gomera</td><td>11</td><td>8</td><td>1</td><td>2</td><td><strong>25</strong></td>
+              </tr>
+              <tr>
+                <td>3</td><td>Alisios Club</td><td>Gran Canaria</td><td>11</td><td>7</td><td>2</td><td>2</td><td><strong>23</strong></td>
+              </tr>
+              <tr>
+                <td>4</td><td>Timanfaya Team</td><td>Lanzarote</td><td>11</td><td>6</td><td>2</td><td>3</td><td><strong>20</strong></td>
+              </tr>
+              <tr>
+                <td>5</td><td>Bentayga Esports</td><td>Gran Canaria</td><td>11</td><td>5</td><td>1</td><td>5</td><td><strong>16</strong></td>
+              </tr>
+              <tr>
+                <td>6</td><td>Roque Nublo Gaming</td><td>Gran Canaria</td><td>11</td><td>4</td><td>1</td><td>6</td><td><strong>13</strong></td>
+              </tr>
+              <tr>
+                <td>7</td><td>Dunas de Corralejo</td><td>Fuerteventura</td><td>11</td><td>2</td><td>2</td><td>7</td><td><strong>8</strong></td>
+              </tr>
+              <tr>
+                <td>8</td><td>Garajonay Legends</td><td>La Gomera</td><td>11</td><td>1</td><td>0</td><td>10</td><td><strong>3</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>Próxima jornada</h2>
+        <p class="subtitulo">Jornada 12.</p>
+        <div class="rejilla">
+          <div class="tarjeta"><h3>Guanches vs. Alisios</h3><p>Dota 2 · Sábado, 18:00</p></div>
+          <div class="tarjeta"><h3>Tajaraste vs. Timanfaya</h3><p>Team Fortress 2 · Sábado, 20:00</p></div>
+          <div class="tarjeta"><h3>Bentayga vs. Dunas</h3><p>Street Fighter IV · Domingo, 17:00</p></div>
+          <div class="tarjeta"><h3>Roque Nublo vs. Garajonay</h3><p>Civilization VI · Domingo, 19:00</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Liga Canaria de Videojuegos · Temporada 2026/2027</p>
+      <p>Proyecto de clase · Práctica V de Entornos de Desarrollo · CIFP César Manrique</p>
+    </div>
+  </footer>
+</body>
+</html>
